@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ncp_homotopy"
+version = "0.1.0"
+description = "Homotopy and Newton-type solvers for nonlinear complementarity problems."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Ankit Chaudhary", email = "ankit.work8881@gmail.com" }]
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.22"]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
